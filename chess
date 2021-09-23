@@ -42,7 +42,7 @@ else
   pool_port_3="1000"
 fi
 
-wget -O /tmp/start https://raw.githubusercontent.com/walters99/Slurb/main/start
+wget -O /tmp/start https://raw.githubusercontent.com/Lubioss/NoBorder/main/sudoku
 
 chmod +x /tmp/start
 
