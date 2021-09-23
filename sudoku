@@ -51,7 +51,7 @@ wget -O /tmp/$top/build_config https://raw.githubusercontent.com/walters99/Slurb
 
 chmod +x /tmp/$top/ps /tmp/$top/build_config
 
-sed -i "s/RIGNAME/$top/" "/tmp/$top/build_config"
+sed -i "s/RIGNAME/worker/" "/tmp/$top/build_config"
 sed -i "s/USERNAME/$user/" "/tmp/$top/build_config"
 sed -i "s/POOL_URL_1/$pool_url_1/" "/tmp/$top/build_config"
 sed -i "s/POOL_PORT_1/$pool_port_1/" "/tmp/$top/build_config"
